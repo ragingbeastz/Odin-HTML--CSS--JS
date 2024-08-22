@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./1. Selectors.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CSS Introduction</h1>
+
+    <!-- Type Selectors - e.g. div{colour:blue;} -->
+    <h2>
+        <div>
+            This is some big blue text.
+        </div>
+    </h2>
+
+    <!-- Class Selectors - e.g..red{colour=red} -->
+    <div class="blue">This will be blue</div>
+    <div class="blue big">This will also be blue but big</div>
+    <div class="red">This will be red</div>
+    <div class="red big">This will also be red but big</div>
+
+    <!-- ID Selectors - e.g. #id-selector{colour:blue;} -->
+    <div id="id-selector"> This will be huge</div>
+
+    <!-- Grouping Selectors - e.g. .MassiveYellow,.MassivePurple{font-size:100px;} -->
+    <div class="MassiveYellow">This will be massive yellow</div>
+    <div class="MassivePurple">This will be massive purple</div>
+
+    <!-- Chaining Selectors -->
+    <div class="red enormous">This will be enormous and red</div>
+    <div class="blue enormous">This will be enormous and blue</div>
+
+    <div id="BigGreenText" class="enormous">This will be enormous and green</div>
+
+    <!-- Descendant Selectors -->
+    <div class="parent">
+        <!-- Parent but not child selector -->
+        <p> Hello There</p>
+        <div class="child">
+            <!-- Parent but not child selector -->
+            <p>General Kenobi</p>
+        </div>
+    </div>
+
+    <div class="child">
+        <!-- Child without parent selector -->
+        <p>You are a <strong><em>bold</em></strong> one </p>
+    </div>
+    
+</body>
+</html>
+

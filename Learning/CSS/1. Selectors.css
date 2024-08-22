@@ -1,0 +1,81 @@
+/* Universal Selector '*'  */
+/* Applies to everything */
+*{
+    color: black;
+}
+
+/* Type Selector 'div' */
+/* Applies to all of a certain type */
+div{
+    color: blue;
+}
+
+
+/* Class Selectors */
+/* Applies to all elements with a given class */
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+
+.big{
+    font-size: 20px;
+}
+
+/* ID Selectors */
+/* Applies to one element with a given ID */
+#id-selector {  
+    font-size: 90px;
+}
+
+/* Grouping Selectors */
+/* Allows sharing of declarations to multiple classes */
+/* Useful for when classes should share attributes */
+.MassiveYellow,
+.MassivePurple{
+    font-size: 100px;
+    background-color: gainsboro;
+}
+
+.MassiveYellow{
+    color: yellow;
+}
+.MassivePurple{
+    color: purple;
+}
+
+/* Chaining Selectors */
+/* Allows for specific alteration of classes that are listed together */
+.enormous{
+    font-size: 150px;
+}
+.red.enormous{
+    background-color: salmon;
+}
+
+/* Can also be used with ID's */
+#BigGreenText{
+    color: green;
+}
+#BigGreenText.enormous{
+    background-color: lightgreen;
+}
+
+/* Descendent Combinator */
+/* Allows for styling of elements that are children of a certain element */
+
+.parent{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+}
+.child{
+    text-emphasis: bold;
+    font-size: 50px;
+    color: blue;
+}
+
+.parent .child{
+    text-shadow: 2px 2px 2px rgb(11, 23, 158);
+}
