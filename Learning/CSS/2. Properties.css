@@ -1,0 +1,65 @@
+/* Colours */
+.colour1{
+    /* hex example: */
+    color: #1100ff;
+}
+  
+.colour2{
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+}
+  
+.colour3{
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+}
+
+.colour4{
+    color:purple;
+    background-color: yellow;
+}
+
+/* Fonts */
+
+.font1{
+    /* One given font */
+    font-family: Arial;
+}
+
+.font2{
+    /* Multiple fonts */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font3{
+    /* Font size */
+    font-size: 30px;
+}
+
+.font4{
+    /* Font weight */
+    font-weight: bold;
+}
+
+.font5{
+    font-family: fantasy;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Image */
+
+.image1{
+    /* Image size */
+
+    /* Keeps proportion width wise 
+    according to height */
+    width: auto;
+    height: 700px;
+
+    /* Centers Image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
