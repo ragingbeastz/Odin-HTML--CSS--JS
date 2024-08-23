@@ -1,0 +1,49 @@
+#Heading{
+    text-decoration: underline;
+    font-family: fantasy;
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: center;
+
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 10px;
+}
+
+.Heading2{
+    text-decoration: underline;
+    font-family: fantasy;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 10px;
+}
+
+.bsizing{
+    padding: 5px;
+    border: solid red;
+    height: 20px;
+    border-width: 5px;
+}
+.bContent{
+    box-sizing: content-box;
+    padding: 5px;
+    border-width: 5px;
+}
+
+
+div{
+    font-size: 50px;
+    background-color: tomato;
+    margin: 10px;
+}
+
+span{
+    font-size: 50px;   
+    background-color: lightblue;
+    margin: 10px;
+
+}

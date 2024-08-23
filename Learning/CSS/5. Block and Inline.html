@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block and Inline</title>
+    <link rel="stylesheet" href="5. Block and Inline.css">
+</head>
+<body>
+    <h1 ID="Heading">Block, Inline and Inline-Block</h1>
+
+    <!-- Box Sizing -->
+     <!--
+     <h2 class="Heading2">Box Sizing</h2>
+    <p class="bsizing" style="box-sizing: content-box; padding: 10px; border-width: 10px;">This Text is Written in a "box-sizing: Content" box. Bigger than comparison box</p>
+    <p class="bsizing" style="background-color: black;">Comparison Box</p>
+    <p class="bsizing" style="box-sizing: border-box; padding: 10px; border-width: 10px;">This Text is Written in a "box-sizing: Content" box. Same as comparison box</p>
+    -->
+
+    
+    <h2 class="Heading2">Block and Inline Elements</h2>
+    <!-- Block and Inline Elements 
+     
+        display = property specifies how an element is displayed:
+
+        block: Displays an element as a block element (like <p>)
+               Elements are displayed in a block, taking up 
+               the full width available and 
+               forcing line breaks before and after the element.
+        
+        inline: Displays an element as an inline element (like <span>)
+                Elements are displayed inline, allowing other elements 
+                to sit to their left and right.   
+    -->
+
+    <div>This is a block div</div>
+    <div style="width: 300px; height: 300px;">This is a block div with a set size</div>
+    <span>This is an inline span</span>
+    <span style="width: 300px; height: 300px;">This is an inline span with a set size</span>
+
+    <h2 class="Heading2">Using Display Attribute</h2>
+    <div>This is a block div</div>
+    <div style="display: inline;">This is an inline div</div>
+
+    <span>This is an inline span</span>
+    <span style="display: block;">This is a block span</span>
+
+    <h2 class="Heading2">Inline-Block</h2>
+    <div>This is a block div</div>
+    <div style="display: inline-block;">This is an inline-block div</div>
+    <div style="display: inline-block; width: 300px; height: 300px;">This is an inline-block div with a set size</div>
+            <p style="font-size: 30px; font-weight: bold;">Cheeky little separator</p>
+    <span>This is an inline span</span>
+    <span style="display: inline-block;">This is an inline-block span</span>
+    <span style="display: inline-block; width: 300px; height: 300px;">This is an inline-block span with a set size</span>
+</body>
+</html>
