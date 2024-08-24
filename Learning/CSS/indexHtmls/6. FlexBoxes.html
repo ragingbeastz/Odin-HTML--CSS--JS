@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Boxes</title>
+    <link rel="stylesheet" href="../0. Headings.css">
+    <link rel="stylesheet" href="../6. FlexBoxes.css">
+</head>
+<body>
+    <h1 class="Heading">Flex Boxes</h1>
+
+    <!-- Multiple Flex Containers -->
+    <div class="flex-container" style="justify-content: center; flex-wrap: wrap; padding: 0px;">
+        <img style="margin: 50px; width: 50%; height: auto;" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/b2a53579fcbec1cfde47646cc5a2b109cd7772cc/foundations/html_css/flexbox/imgs/03.png">
+        <img style="margin: 50px; width: 30%; height: auto;" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/04.png">
+    </div>
+
+    <div class="flex-container" style="justify-content: center; flex-wrap: wrap;">
+        <h2 class="Heading2" style="outline-width: 0px;"> Makes it possible to make layouts e.g.</p>
+    </div>
+
+    <!-- Constructing Layout using Flex Container -->
+
+        <div class="GreenBox flex-container" style="flex-direction: column;">
+
+            <div class="flex-container" style="height: 150px;">
+                <div class="BlueBox flex-container" style="padding: 20px;">
+                    <div class="PeachBox"></div>
+                    <div class="PeachBox flex-container" style="gap:0px">
+                        <div class="RedBox"></div>
+                        <div class="RedBox"></div>
+                    </div>
+                    <div class="PeachBox"></div>
+                </div>
+            </div>
+
+            <div class="flex-container" style="height: 350px;">
+                <div class="RedBox"></div>
+                <div class="flex-container" style="flex-direction: column; 
+                                                    width: 50%; padding: 0px;">
+                    <div class="RedBox"></div>
+                    <div class="RedBox"></div>
+                </div>
+            </div>
+
+            <div class="flex-container" style="height: 150px;">
+                <div class="BlueBox flex-container">
+                    <div class="PurpleBox" style="flex: 2;"></div>
+                    <div class="PeachBox"></div>
+                    <div class="PeachBox"></div>
+                    <div class="PurpleBox" style="flex: 2"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+</html>
