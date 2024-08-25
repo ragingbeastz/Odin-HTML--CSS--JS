@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Attributes</title>
+    <link rel="stylesheet" href="../0. Headings.css">
+    <link rel="stylesheet" href="../7. Flex Attributes.css">
+</head>
+<body>
+    <h1 class="Heading">Flex Attributes</h1>
+
+    <!-- Flex Grow -->
+    <h2 class="Heading2">Flex Grow</h2>
+    <p style="font-size: 35px;"> The red box will display at 2x the bluebox.</p>
+    <div class="flex-container" style="height: 100px;">
+        <div class="RedBox" style="flex:1; flex-grow: 2;"></div>
+        <div class="BlueBox" style="flex:1;"></div>
+    </div>
+    <p style="font-size: 35px;"> and now the bluebox.</p>
+    <div class="flex-container" style="height: 100px;">
+        <div class="RedBox" style="flex:1;"></div>
+        <div class="BlueBox" style="flex:1; flex-grow: 2;"></div>
+    </div>
+
+    <!-- Flex Shrink -->
+    <h2 class="Heading2">Flex Shrink</h2>
+    <p style="font-size: 35px;"> These boxes will exceed its container</p>
+    <div class="GreenBox flex-container" style="width:1000px; height: 100px;">
+        <div class="RedBox" style="width: 350px; flex-shrink: 0;"></div>
+        <div class="RedBox" style="width: 350px; flex-shrink: 0;"></div>
+        <div class="RedBox" style="width: 350px; flex-shrink: 0;"></div>
+    </div>
+
+    <p style="font-size: 35px;"> and these boxes won't exceed its container</p>
+    <div class="GreenBox flex-container" style="width:1000px; height: 100px;">
+        <div class="RedBox" style="width: 350px; flex-shrink: 1;"></div>
+        <div class="RedBox" style="width: 350px; flex-shrink: 1;"></div>
+        <div class="RedBox" style="width: 350px; flex-shrink: 1;"></div>
+    </div>
+
+    <p style="font-size: 35px;"> and the last box shrinks more</p>
+    <div class="GreenBox flex-container" style="width:1000px; height: 100px;">
+        <div class="RedBox" style="width: 500px; flex-shrink: 1;"></div>
+        <div class="RedBox" style="width: 500px; flex-shrink: 1;"></div>
+        <div class="RedBox" style="width: 500px; flex-shrink: 2;"></div>
+    </div>
+
+    <!-- Flex Basis -->
+     <h2 class="Heading2">Flex Basis</h2>
+     <p style="font-size: 35px;"> these boxes have set initial sizes</p>
+    <div class="GreenBox flex-container" style="width:1000px; height: 100px;">
+        <div class="RedBox" style="width: 500px; flex-basis: 0;"></div>
+        <div class="RedBox" style="width: 500px; flex-basis: 100px;"></div>
+        <div class="RedBox" style="width: 500px; flex-basis: 150px;"></div>
+        <div class="RedBox" style="width: 500px; flex-basis: 750px;"></div>
+    </div>
+
+</body>
+</html>
