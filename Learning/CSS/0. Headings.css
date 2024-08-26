@@ -3,13 +3,14 @@
     font-weight: bolder;
     text-align: center;
     text-decoration: underline;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 10px;
+
     font-family: Luminari, fantasy;
 
+    display: block;
+    width: 100vw;
+
     margin: 0px;
-    padding: 5px;
+    padding: 15px 0;
 }
 
 .Heading2{
@@ -17,12 +18,10 @@
     font-weight: bolder;
     text-align: center;
     text-decoration: underline;
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 10px;
     font-family: Luminari, fantasy;
 
-    margin: 20px;
+    display: block;
     padding: 5px;
+    width: 100vw;
 
 }

@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+  }
+
+  .flex-container-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+.flex-container-column div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 160px;
+    flex: 1 1 auto;
+  }
+
+.flex-container div {
+    background: peachpuff;
+    border: 4px solid brown;
+    justify-content: stretch;
+    flex: 1;
+  }
+
+  .page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
