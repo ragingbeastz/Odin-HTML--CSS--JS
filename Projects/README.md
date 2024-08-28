@@ -5,4 +5,6 @@ This repository contains a collection of projects completed as part of the Odin 
 ## Projects
 - [Project 1: Recipes HTML](odin-recipes) - A project that demonstrates the use of HTML to create a simple recipe website.
 
+- [Project 1: Landing Page HTML+CSS](landing-page) - A project that demonstrates the use of HTML and CSS to create a structured landing page for a website.
+
 Feel free to explore each project.
