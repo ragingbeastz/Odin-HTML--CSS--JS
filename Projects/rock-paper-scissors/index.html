@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 class="Heading" style="padding-bottom: 50px;">Rock-Paper-Scissors Game</h1>
+    
+    <div class="flex-container" style="justify-content: center; align-items: center;">
+        <div class="flex-container outerBox" style="justify-content: center; align-items: center; margin-left:50%; margin-right: 50%; flex-direction: column;">
+            <div class="outerBoxTitle">Please Enter Either</div>
+            <div class="outerBoxText">Rock, Paper or Scissors</div>
+
+            <input class = "inputTextBox" type ="text" id="playerChoice" name="playerChoice">
+            <input class = "inputButton" type="button" value="Challenge!" onclick="runProgram()">
+
+            <div class="innerBox" style="height: 150px; width: 100%; display: flex;" id="Box">            </div>
+
+        </div>
+    </div>
+
+    <script src="./javascript.js"></script>
+    
+
+</body>
+</html>

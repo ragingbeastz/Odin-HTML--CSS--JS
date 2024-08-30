@@ -1,0 +1,82 @@
+.Heading{
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+
+    font-family: Luminari, fantasy;
+
+    display: block;
+    width: 100vw;
+
+    margin: 0px;
+    padding: 15px 0;
+}
+
+.Heading2{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Luminari, fantasy;
+
+    display: block;
+    padding: 5px;
+    width: 100vw;
+
+}
+
+.flex-container{
+    display: flex;
+}
+
+.outerBox{
+    background-color: gray;
+    border: solid 4px black;
+    padding: 5px;
+    flex: auto;
+}
+
+.outerBoxTitle{
+    font-size: 70px; 
+    font-weight: bold; 
+    font-family: fantasy; 
+    text-wrap: nowrap;
+    color: black;
+}
+
+.outerBoxText{
+    font-size: 45px; 
+    font-family: sans-serif;
+    color: white;
+}
+
+.innerBox{
+    background-color: grey;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-wrap: wrap;
+    flex: auto;
+
+}
+
+.inputTextBox{
+    width: 50%;
+    margin: 10px;
+    border: solid 3px black;
+}
+
+
+.inputButton{
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.inputButton:hover{
+    background-color: rgb(112, 226, 112);
+}
+
