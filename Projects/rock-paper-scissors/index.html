@@ -14,8 +14,11 @@
             <div class="outerBoxTitle">Please Enter Either</div>
             <div class="outerBoxText">Rock, Paper or Scissors</div>
 
-            <input class = "inputTextBox" type ="text" id="playerChoice" name="playerChoice">
-            <input class = "inputButton" type="button" value="Challenge!" onclick="runProgram()">
+            <div class="flex-container" style="gap: 10px; margin: 10px;">
+                <input class = "inputButton" type="button" value="Rock" name = "rock" onclick="runProgram(1)">
+                <input class = "inputButton" type="button" value="Paper" name = "paper" onclick="runProgram(2)">
+                <input class = "inputButton" type="button" value="Scissors" name = "scissors" onclick="runProgram(3)">
+            </div>
 
             <div class="innerBox" style="height: 150px; width: 100%; display: flex;" id="Box">            </div>
 

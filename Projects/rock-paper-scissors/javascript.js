@@ -84,22 +84,25 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function inputValidation(playerInput){
-    x = String(playerInput);
-    x = x.trim().toLowerCase();
-
-    if (x == "rock" || x == "scissors" || x == "paper"){
-        return x;
-    }
-
-    else{
-        return playerChoice == false;
-    }
-}
-
-function runProgram() {
+function runProgram(playerChoiceInput) {
     
-    let playerChoice = inputValidation(document.getElementById("playerChoice").value)
+    let playerChoice;
+
+    switch(playerChoiceInput){
+        case 1:
+            playerChoice = "rock";
+            break;
+
+        case 2:
+            playerChoice = "paper";
+            break;
+
+        case 3:
+            playerChoice = "scissors";
+             break;
+    }
+
+
     let box = document.getElementById("Box");
     if (playerChoice == false){
         box.style.backgroundColor = 'red'; 
