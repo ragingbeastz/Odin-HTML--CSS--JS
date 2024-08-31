@@ -1,4 +1,9 @@
 //copilot:ignore
+let playerScore = 0;
+let compScore = 0;
+let roundsLeft = 5;
+let buttonsEnabled = true;
+
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
@@ -84,11 +89,40 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function runProgram(playerChoiceInput) {
-    
-    let playerChoice;
+function resetGame() {
+    playerScore = 0;
+    compScore = 0;
+    roundsLeft = 5;
 
-    switch(playerChoiceInput){
+    document.getElementById("rock").classList.remove("red-hover");
+    document.getElementById("paper").classList.remove("red-hover");
+    document.getElementById("scissors").classList.remove("red-hover");
+
+
+    document.getElementById("rock").classList.add("green-hover");
+    document.getElementById("paper").classList.add("green-hover");
+    document.getElementById("scissors").classList.add("green-hover");
+
+    document.getElementById("flexEndContainer").style.display = "none";
+
+    let box = document.getElementById("Box");
+    box.style.backgroundColor = 'grey';
+    box.style.color = 'black';
+    box.innerText = "";
+
+    buttonsEnabled = true;
+}
+
+function runProgram(playerChoiceInput) {
+
+    if (buttonsEnabled == false) {
+        return;
+    }
+
+    let playerChoice;
+    let box = document.getElementById("Box");
+
+    switch (playerChoiceInput) {
         case 1:
             playerChoice = "rock";
             break;
@@ -99,37 +133,76 @@ function runProgram(playerChoiceInput) {
 
         case 3:
             playerChoice = "scissors";
-             break;
+            break;
+    }
+
+    roundsLeft--;
+
+    let computerChoice = getComputerChoice();
+    switch (playRound(playerChoice, computerChoice)) {
+        case "Won":
+            box.style.backgroundColor = 'lightgreen';
+            box.style.color = 'black';
+            box.innerText = playerChoice + " beats " + computerChoice + "! You win";
+            playerScore++;
+            break;
+
+        case "Lost":
+            box.style.backgroundColor = 'red';
+            box.style.color = 'white';
+            box.innerText = playerChoice + " lost to " + computerChoice + "! You lost";
+            compScore++;
+            break;
+
+        case "Drawn":
+            box.style.backgroundColor = 'yellow';
+            box.style.color = 'black';
+            box.innerText = playerChoice + " draws against " + computerChoice + "! You drew";
+            roundsLeft++;
+            break;
     }
 
 
-    let box = document.getElementById("Box");
-    if (playerChoice == false){
-        box.style.backgroundColor = 'red'; 
-        box.style.color = 'white';
-        box.innerText="Incorrect Entry"
-    }
+    document.getElementById("playerScore").innerText = "Player Score: " + playerScore;
+    document.getElementById("compScore").innerText = "Computer Score: " + compScore;
+    document.getElementById("roundsLeft").innerText = "Rounds Left: " + roundsLeft;
 
-    else {
-        let computerChoice = getComputerChoice();
-        switch (playRound(playerChoice, computerChoice)) {
-            case "Won":
-                box.style.backgroundColor = 'lightgreen';
-                box.style.color = 'black';
-                box.innerText = playerChoice + " beats " + computerChoice + "! You win";
-                break;
+    if (roundsLeft == 0 || playerScore == 3  || compScore == 3) {
+        buttonsEnabled = false;
+        document.getElementById("playerScore").innerText = "";
+        document.getElementById("compScore").innerText = "";
+        document.getElementById("roundsLeft").innerText = "";
 
-            case "Lost":
-                box.style.backgroundColor = 'red';
-                box.style.color = 'white';
-                box.innerText = playerChoice + " lost to " + computerChoice + "! You lost";
-                break;
 
-            case "Drawn":
-                box.style.backgroundColor = 'yellow';
-                box.style.color = 'black';
-                box.innerText = playerChoice + " draws against " + computerChoice + "! You drew";
-                break;
+        document.getElementById("rock").classList.remove("green-hover");
+        document.getElementById("paper").classList.remove("green-hover");
+        document.getElementById("scissors").classList.remove("green-hover");
+
+
+        document.getElementById("rock").classList.add("red-hover");
+        document.getElementById("paper").classList.add("red-hover");
+        document.getElementById("scissors").classList.add("red-hover");
+
+
+
+        document.getElementById("flexEndContainer").style.display = "flex";
+
+        if (playerScore > compScore) {
+            document.getElementById("finalBox").style.backgroundColor = "lightgreen";
+            document.getElementById("finalBox").style.color = "black";
+            document.getElementById("finalboxText").innerText = "You Win!"
         }
+
+        else {
+            document.getElementById("finalBox").style.backgroundColor = "red";
+            document.getElementById("finalBox").style.color = "white";
+            document.getElementById("finalboxText").innerText = "You Lost!"
+        }
+
+        document.getElementById("finalboxText2").innerText = "Player Score: " + playerScore + " || Computer Score: " + compScore + " || Rounds Left: " + roundsLeft;
+
+
     }
 }
+
+
